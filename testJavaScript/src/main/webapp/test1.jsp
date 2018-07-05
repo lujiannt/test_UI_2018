@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>javascript变量</title>
+<title>javascript 变量</title>
 
 <script type="text/javascript">
 	console.log("看看执行不执行");
