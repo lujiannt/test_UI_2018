@@ -64,6 +64,16 @@
 </script>
 
 <script type="text/javascript">
+	//测试函数提升，声明提升例子
+	console.log(a); // 输出a函数体
+	function a() {
+	    console.log("aaaaa");
+	}
+	var a = 1;
+	console.log(a); // 输出1
+</script>
+
+<script type="text/javascript">
 	//测试函数提升，整体提升
 	testF1();
 	var aaa = "testF1函数提升 111";
@@ -73,14 +83,22 @@
 	}
 </script>
 
+<!-- 3.匿名函数 -->
 <script type="text/javascript">
-	//测试函数提升，声明提升例子
-	console.log(a); // 输出a函数体
-	function a() {
-	    console.log("aaaaa");
+	//直接调用
+	(function(){
+		console.log("匿名函数1");
+	})();
+	
+	//触发
+	document.onclick = function() {
+		console.log("匿名函数2");
 	}
-	var a = 1;
-	console.log(a); // 输出1
+	
+	//定时器
+	setInterval(function(){
+		console.log("匿名函数3");
+	},1000);
 </script>
 
 </head>
@@ -97,6 +115,9 @@
 	</p>
 	<p>
 		4.不同函数的定义方式，函数提升声明提升也不一样，要注意函数定义和执行位置的前后顺序
+	</p>
+	<p>
+		5.匿名函数，有可以立即执行,防止函数名污染等作用
 	</p>
 	
 </body>
