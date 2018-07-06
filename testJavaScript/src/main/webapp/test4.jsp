@@ -74,6 +74,8 @@
 
 <!-- 5.对象字面量创建对象  -->
 <script type="text/javascript">
+	//字面量：值的表现形式
+	//对象字面量：对象的表现形式
 	var obj4 = {
 			name:"刘琦",
 			age:20,
