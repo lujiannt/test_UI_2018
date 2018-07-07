@@ -1,5 +1,6 @@
 var showTabContent = function (target, option) {
-	var content = '<iframe scrolling="auto" frameborder="0"  src="'+option.url+'" style="width:100%;height:100%;"></iframe>';
+//	var content = '<iframe scrolling="auto" frameborder="0"  src="'+option.url+'" style="width:100%;height:100%;"></iframe>';
+	target.attr("src",option.url);
 	target.html("");
 	target.html(content);
 }

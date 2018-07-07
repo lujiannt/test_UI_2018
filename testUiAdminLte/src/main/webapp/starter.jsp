@@ -34,6 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<script src="lte/plugins/bootstrap-tab/js/tab.js"></script>
 	<script src="lte/plugins/bootstrap-tab/js/dropdown.js"></script>
 	<script src="lte/plugins/bootstrap-tab/js/util.js"></script>
+	<script src="lte/plugins/bootstrap-tab/js/dynamic-tabs.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -90,19 +91,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a onclick="addTab('chart','www.baidu.com')" class="nav-link">
+                <a tabId="ChartJS" title="ChartJS" url="https://baidu.com" href="#" class="nav-link nav-link-url">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ChartJS</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a tabId="Flot" title="Flot" url="https://jQuery.com" href="#" class="nav-link nav-link-url">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Flot</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
+                <a tabId="Inline" title="Inline" url="http://www.i7758.com"  href="#" class="nav-link nav-link-url">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>Inline</p>
                 </a>
@@ -119,14 +120,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
+    	<ul class="nav nav-tabs" role="tablist" id="myTabs">
+    	</ul>
     </div>
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <div class="content">
+    <div class="content" >
       <div class="container-fluid">
-        <div class="row">
-				
+        <div class="row" >
+			<iframe src="" id="tabContent" scrolling="auto" frameborder="0" style="width:100%;height:800px">
+			</iframe>
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -161,7 +165,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <script>
 	var tab = $("#myTabs");
-	$(".mail").bind("click", function(){
+	$(".nav-link-url").bind("click", function(){
 		var option = {
 				"id":$(this).attr("tabId"),
 				"title":$(this).attr("title"),
