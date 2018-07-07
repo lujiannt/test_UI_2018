@@ -7,20 +7,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-  <title>AdminLTE 3 | Starter</title>
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="lte/plugins/font-awesome/css/font-awesome.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="lte/dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	
+	<title>AdminLTE 3 | Starter</title>
+	
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="lte/plugins/font-awesome/css/font-awesome.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="lte/dist/css/adminlte.min.css">
+	<!-- Google Font: Source Sans Pro -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+	<!-- icon style -->
+	<link rel="stylesheet" type="text/css" href="lte/custom/icon/font-class/iconfont.css">
   
-  <link rel="stylesheet" type="text/css" href="lte/custom/icon/font-class/iconfont.css">
+  
+	<!-- jQuery -->
+	<script src="lte/plugins/jquery/jquery.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="lte/dist/js/adminlte.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Bootstrap 4 tab -->
+	<script src="lte/plugins/bootstrap-tab/js/popper.min.js"></script>
+	<script src="lte/plugins/bootstrap-tab/js/tab.js"></script>
+	<script src="lte/plugins/bootstrap-tab/js/dropdown.js"></script>
+	<script src="lte/plugins/bootstrap-tab/js/util.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -68,7 +81,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
        		<li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link" >
               <i class="nav-icon fa fa-pie-chart"></i>
               <p>
                 Charts
@@ -77,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a onclick="addTab('chart','www.baidu.com')" class="nav-link">
                   <i class="fa fa-circle-o nav-icon"></i>
                   <p>ChartJS</p>
                 </a>
@@ -106,19 +119,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Starter Page</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
 
@@ -126,61 +126,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-
-            <div class="card card-primary card-outline">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's
-                  content.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div><!-- /.card -->
-          </div>
-          <!-- /.col-md-6 -->
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">Special title treatment</h6>
-
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <!-- /.col-md-6 -->
+				
         </div>
         <!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -213,11 +159,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 
-<!-- jQuery -->
-<script src="lte/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="lte/dist/js/adminlte.min.js"></script>
+
 </body>
 </html>
