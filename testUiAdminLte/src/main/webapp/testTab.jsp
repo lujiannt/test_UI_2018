@@ -61,16 +61,6 @@
 		
 		tab.addTabs(option);
 	});
-	
-	$(".nav-link").bind("click", function(){
-		alert(1);
-		var option = {
-				"id":$(this).attr("id"),
-				"url":$(this).attr("url")
-		}
-		
-		tab.showTab(option);
-	});
 </script>
 </body>
 

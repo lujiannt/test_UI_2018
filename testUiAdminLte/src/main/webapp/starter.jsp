@@ -159,6 +159,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- REQUIRED SCRIPTS -->
 
-
+<script>
+	var tab = $("#myTabs");
+	$(".mail").bind("click", function(){
+		var option = {
+				"id":$(this).attr("tabId"),
+				"title":$(this).attr("title"),
+				"url":$(this).attr("url")
+		}
+		
+		tab.addTabs(option);
+	});
+	
+</script>
 </body>
 </html>

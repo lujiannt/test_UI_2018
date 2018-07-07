@@ -31,8 +31,6 @@ $.fn.addTabs = function (option) {
 	    });
 	    li.append(a);
 	    ul.append(li);
-	    
-	   
 	}
 	
 	//content
