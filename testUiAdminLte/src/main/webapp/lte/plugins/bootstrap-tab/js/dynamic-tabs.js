@@ -11,15 +11,21 @@ $(function () {
 		var tabs = $(".nav-link-tab");
 		var length = tabs.length-1;
 		
-		$.each(tabs,function(index,value){
-		     if(index == length-1) {
-		    	 $("#"+$(this).attr('id')).addClass("active");
-		    	 target.attr("src",$(this).attr('tabUrl'));
-		    	 
-		    	 $("#"+option.id).removeClass("active");
-		 		$("#"+option.id).remove();
-		     }
-		});
+		if(length == 0) {
+			target.attr("src","home.jsp");
+			$("#"+option.id).removeClass("active");
+			$("#"+option.id).remove();
+		}else {
+			$("#"+option.id).removeClass("active");
+			$("#"+option.id).remove();
+			var newtabs = $(".nav-link-tab");
+			$.each(newtabs,function(index,value){
+			     if(index == length-1) {
+			    	 $("#"+$(this).attr('id')).addClass("active");
+			    	 target.attr("src",$(this).attr('tabUrl'));
+			     }
+			});
+		}
 	}
 	
 	//清除所有tab
@@ -86,15 +92,22 @@ $(function () {
 		        }
 		    });
 		    
-		    var a1 = $("<a />", {
+		    
+		    var icon = $("<i />", {
+		    	"class" : "icon iconfont icon-aui-icon-close",
+		    	"mouseenter": function(){
+		    		$(this).attr("class","icon iconfont icon-close");
+		    	},
+		    	"mouseout": function(){
+		    		$(this).attr("class","icon iconfont icon-aui-icon-close");
+		    	},
 		        "click": function () {
 		        	clearTab(option);
 		        }
 		    }); 
 		    
-		    var icon = "&nbsp;&nbsp;&nbsp;&nbsp;<i class='icon iconfont icon-aui-icon-close'>\</i>";
-		    a1.append(icon);
-		    a.append(a1);
+		    a.append("&nbsp;&nbsp;&nbsp;&nbsp;");
+		    a.append(icon);
 		    nav.append(a);
 		}
 		
