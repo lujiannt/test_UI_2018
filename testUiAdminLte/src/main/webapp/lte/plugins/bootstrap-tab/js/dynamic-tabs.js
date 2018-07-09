@@ -4,11 +4,11 @@ var showTabContent = function (target, option) {
 }
 
 //清除tabs
-var clearTabs = function () {
+var clearTabs = function (option) {
 	var target = $("#tabContent");
 	$(".tab-clean").remove();
 	showTabContent(target, {
-			"url" : ""
+			"url" : option.url
 	});
 }
 
@@ -48,6 +48,7 @@ $.fn.addTabs = function (option) {
 
 //胶囊式tab
 $.fn.addTabsPills = function (option) {
+	
 	var nav = $(this);
 	var target = $("#tabContent");
 	$(".nav-link").removeClass("active");
@@ -76,5 +77,6 @@ $.fn.addTabsPills = function (option) {
 
 //清除tab
 $.fn.cleanTabs = function (option) {
-	clearTabs();
+	alert(1);
+	clearTabs(option);
 }

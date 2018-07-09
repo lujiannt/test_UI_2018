@@ -65,7 +65,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </ul>
 </nav>
 
-<!--   
+<!-- tabs -->
+<!--
 <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
   	<ul class="nav nav-tabs" role="tablist" id="myTabs">
    	</ul>
@@ -74,7 +75,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <nav id="myTabs" class="nav nav-pills main-header navbar navbar-expand bg-white navbar-light border-bottom" style="height: 45px">
 	<ul class="navbar-nav">
 		<li class="nav-item">
-			<a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+			<a class="nav-link" href="#" id="cleanTabs"><i class="fa fa-bars"></i></a>
 		</li>
 	</ul>
 </nav>
@@ -205,6 +206,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 		}
 		
 		tab.addTabsPills(option);
+	});
+	
+	$("#cleanTabs").bind("click", function(){
+		var option = {
+				"url":""
+		}
+		tab.cleanTabs(option);
 	});
 </script>
 </body>
