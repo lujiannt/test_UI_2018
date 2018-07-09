@@ -6,7 +6,12 @@ $(function () {
 		target.attr("src",option.url);
 	}
 
-	//清除tabs
+	//清除单个tab
+	var clearTab = function (option) {
+		$("#"+option.id).remove();
+	}
+	
+	//清除所有tab
 	var clearTabs = function (option) {
 		$(".tab-clean").remove();
 		showTabContent(target, {
@@ -69,6 +74,16 @@ $(function () {
 		        	showTabContent(target, option);
 		        }
 		    });
+		    
+		    var a1 = $("<a />", {
+		        "click": function () {
+		        	clearTab(option);
+		        }
+		    }); 
+		    
+		    var icon = "&nbsp;&nbsp;&nbsp;&nbsp;<i class='icon iconfont icon-aui-icon-close'>\</i>";
+		    a1.append(icon);
+		    a.append(a1);
 		    nav.append(a);
 		}
 		
