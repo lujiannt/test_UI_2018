@@ -92,7 +92,6 @@ $(function () {
 		        }
 		    });
 		    
-		    
 		    var icon = $("<i />", {
 		    	"class" : "icon iconfont icon-aui-icon-close",
 		    	"mouseenter": function(){

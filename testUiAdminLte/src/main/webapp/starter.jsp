@@ -154,7 +154,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     	<div class="content" >
       		<div class="container-fluid">
         		<div class="row" >
-					<iframe src="" id="tabContent" scrolling="auto" frameborder="0" style="width:100%;height:800px">
+					<iframe src="home.jsp" id="tabContent" scrolling="auto" frameborder="0" style="width:100%;height:800px">
 					</iframe>
         		</div>
         	<!-- /.row -->
