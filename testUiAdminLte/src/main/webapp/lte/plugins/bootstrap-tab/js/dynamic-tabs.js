@@ -37,39 +37,6 @@ $(function () {
 		$(".cleanTabs").hide();
 	}
 
-	//普通tab
-	$.fn.addTabs = function (option) {
-		var ul = $(this);
-		$(".nav-link-tab").removeClass("active");
-		
-		//tab
-		if($("#"+option.id)[0]!=null) {
-			$("#"+option.id).addClass("active");
-		}else {
-			var li = $("<li />", {
-		        "class": "nav-item",
-		    });
-		    
-		    var a = $("<a />", {
-		    	"id": option.id,
-		    	"href":"#",
-		        "class": "nav-link nav-link-tab active show",
-		        "data-toggle": "tab",
-		        "role": "tab",
-		        "text": option.title,
-		        "tabUrl": option.url,
-		        "click": function () {
-		        	showTabContent(target, option);
-		        }
-		    });
-		    li.append(a);
-		    ul.append(li);
-		}
-		
-		//content
-		showTabContent(target,option);
-	}
-
 	//胶囊式tab
 	$.fn.addTabsPills = function (option) {
 		var nav = $(this);
