@@ -1,4 +1,5 @@
 $(function () {
+	//TODO 1.使用map保存当前tab 2.结果删除tab报的错误
 	var target = $("#tabContent");
 	
 	//content
