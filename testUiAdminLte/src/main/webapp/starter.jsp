@@ -73,10 +73,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </nav> 
 -->
 <nav id="myTabs" class="nav nav-pills main-header navbar navbar-expand bg-white navbar-light border-bottom" style="height: 45px">
-	<ul class="navbar-nav cleanTabs" style="display:none">
+	<ul class="navbar-nav">
 		<li class="nav-item">
-			<a class="nav-link" href="#" id="cleanTabs">
-				<i class="icon iconfont icon-close"></i>
+			<a class="nav-link" href="#" id="homeTab">
+				<i class="icon iconfont icon-home"></i>
 			</a>
 		</li>
 	</ul>
@@ -189,33 +189,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- REQUIRED SCRIPTS -->
 
 <script>
-	var tab = $("#myTabs");
-/* 	$(".nav-link-url").bind("click", function(){
-		var option = {
-				"id":$(this).attr("tabId"),
-				"title":$(this).attr("title"),
-				"url":$(this).attr("url")
-		}
-		
-		tab.addTabs(option);
-	}); */
-	
-	$(".nav-link-url").bind("click", function(){
-		var option = {
-				"id":$(this).attr("tabId"),
-				"title":$(this).attr("title"),
-				"url":$(this).attr("url")
-		}
-		
-		tab.addTabsPills(option);
-	});
-	
-	$("#cleanTabs").bind("click", function(){
-		var option = {
-				"url":""
-		}
-		tab.cleanTabs(option);
-	});
 </script>
 </body>
 </html>
