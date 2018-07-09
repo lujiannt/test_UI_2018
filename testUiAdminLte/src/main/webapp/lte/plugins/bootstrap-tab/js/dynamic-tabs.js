@@ -9,22 +9,40 @@ $(function () {
 	//清除单个tab
 	var clearTab = function (option) {
 		var tabs = $(".nav-link-tab");
+		var activetabs = $(".active");
 		var length = tabs.length-1;
+		var flag = true;
 		
+		//1.判断当前tab数量,如果为0直接跳到主页不做任何操作
+		//2.如果大于0.则判断是否有被选中的tab页
+		//3.没有的话将删除掉所要删的tab后的最后一个tab指定为选中状态
+		//4.如果有已选中的tab，判断是否是要删除的那个，如果是走3
+		//5.如果不是，删除掉要删的tab后，其余不变
 		if(length == 0) {
+			$(".nav-link-tab").removeClass("active");
+			$("#"+option.id).remove();
 			target.attr("src","home.jsp");
-			$("#"+option.id).removeClass("active");
-			$("#"+option.id).remove();
 		}else {
-			$("#"+option.id).removeClass("active");
-			$("#"+option.id).remove();
-			var newtabs = $(".nav-link-tab");
-			$.each(newtabs,function(index,value){
-			     if(index == length-1) {
-			    	 $("#"+$(this).attr('id')).addClass("active");
-			    	 target.attr("src",$(this).attr('tabUrl'));
-			     }
-			});
+			if(activetabs.length == 1){
+				$.each(activetabs,function(index,value){
+					if($(this).attr("id") != option.id) {
+						$("#"+option.id).remove();
+						flag = false;
+					}
+				});
+			}
+			
+			if(flag) {
+				$(".nav-link-tab").removeClass("active");
+				$("#"+option.id).remove();
+				var newtabs = $(".nav-link-tab");
+				$.each(newtabs,function(index,value){
+					if(index == length-1) {
+						$("#"+$(this).attr('id')).addClass("active");
+						target.attr("src",$(this).attr('tabUrl'));
+					}
+				});
+			}
 		}
 	}
 	
