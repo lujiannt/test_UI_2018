@@ -1,5 +1,8 @@
 //content
 var showTabContent = function (target, option) {
+	if($("#"+option.id)[0]!=null) {
+		$(".cleanTabs").show();
+	}
 	target.attr("src",option.url);
 }
 
@@ -10,6 +13,7 @@ var clearTabs = function (option) {
 	showTabContent(target, {
 			"url" : option.url
 	});
+	$(".cleanTabs").hide();
 }
 
 //普通tab
@@ -77,6 +81,5 @@ $.fn.addTabsPills = function (option) {
 
 //清除tab
 $.fn.cleanTabs = function (option) {
-	alert(1);
 	clearTabs(option);
 }

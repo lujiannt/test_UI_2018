@@ -73,9 +73,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </nav> 
 -->
 <nav id="myTabs" class="nav nav-pills main-header navbar navbar-expand bg-white navbar-light border-bottom" style="height: 45px">
-	<ul class="navbar-nav">
+	<ul class="navbar-nav cleanTabs" style="display:none">
 		<li class="nav-item">
-			<a class="nav-link" href="#" id="cleanTabs"><i class="fa fa-bars"></i></a>
+			<a class="nav-link" href="#" id="cleanTabs">
+				<i class="icon iconfont icon-close"></i>
+			</a>
 		</li>
 	</ul>
 </nav>
