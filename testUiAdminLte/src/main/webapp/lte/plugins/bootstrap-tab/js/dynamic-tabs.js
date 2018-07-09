@@ -125,6 +125,7 @@ $(function () {
 	//----------------------------业务实现-------------------------------
 	var tab = $("#myTabs");	
 	
+	//点击菜单链接显示tab和content
 	$(".nav-link-url").bind("click", function(){
 		var option = {
 				"id":$(this).attr("tabId"),
@@ -135,6 +136,7 @@ $(function () {
 		tab.addTabsPills(option);
 	});
 	
+	//清除所有tab
 	$(".cleanTabs-icon").bind("click", function(){
 		var option = {
 				"url":""
@@ -142,6 +144,7 @@ $(function () {
 		tab.cleanTabs(option);
 	});
 	
+	//点击主页
 	$("#homeTab").bind("click", function(){
 		$(".nav-link-tab").removeClass("active");
 		showTabContent(target, {
