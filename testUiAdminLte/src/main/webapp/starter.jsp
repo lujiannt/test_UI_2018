@@ -118,19 +118,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a tabId="ChartJS" title="ChartJS" url="https://baidu.com" href="#" class="nav-link nav-link-url">
+              <a tabId="ChartJS" title="ChartJS" url="page1.jsp" href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>ChartJS</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="Flot" title="Flot" url="https://jQuery.com" href="#" class="nav-link nav-link-url">
+              <a tabId="Flot" title="Flot" url="page2.jsp" href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>Flot</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="Inline" title="Inline" url="http://www.i7758.com"  href="#" class="nav-link nav-link-url">
+              <a tabId="Inline" title="Inline" url="page3.jsp"  href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>Inline</p>
               </a>
