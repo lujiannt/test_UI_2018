@@ -8,7 +8,18 @@ $(function () {
 
 	//清除单个tab
 	var clearTab = function (option) {
-		$("#"+option.id).remove();
+		var tabs = $(".nav-link-tab");
+		var length = tabs.length-1;
+		
+		$.each(tabs,function(index,value){
+		     if(index == length-1) {
+		    	 $("#"+$(this).attr('id')).addClass("active");
+		    	 target.attr("src",$(this).attr('tabUrl'));
+		    	 
+		    	 $("#"+option.id).removeClass("active");
+		 		$("#"+option.id).remove();
+		     }
+		});
 	}
 	
 	//清除所有tab
@@ -39,8 +50,8 @@ $(function () {
 		        "class": "nav-link nav-link-tab active show",
 		        "data-toggle": "tab",
 		        "role": "tab",
-		        "url":option.url,
 		        "text": option.title,
+		        "tabUrl": option.url,
 		        "click": function () {
 		        	showTabContent(target, option);
 		        }
@@ -55,7 +66,6 @@ $(function () {
 
 	//胶囊式tab
 	$.fn.addTabsPills = function (option) {
-		
 		var nav = $(this);
 		$(".nav-link-tab").removeClass("active");
 		
@@ -68,10 +78,11 @@ $(function () {
 		    	"href":"#",
 		        "class": "nav-link nav-item nav-link-tab active tab-clean",
 		        "data-toggle": "tab",
-		        "url":option.url,
 		        "text": option.title,
+		        "tabUrl": option.url,
 		        "click": function () {
-		        	showTabContent(target, option);
+		        	if($(this)!=null)
+		        		showTabContent(target, option);
 		        }
 		    });
 		    
