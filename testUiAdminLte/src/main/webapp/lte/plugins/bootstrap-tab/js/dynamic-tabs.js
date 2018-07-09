@@ -72,7 +72,7 @@ $(function () {
 		        }
 		    }); 
 		    
-		    a.append("&nbsp;&nbsp;&nbsp;&nbsp;");
+		    a.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 		    a.append(icon);
 		    nav.append(a);
 		}
