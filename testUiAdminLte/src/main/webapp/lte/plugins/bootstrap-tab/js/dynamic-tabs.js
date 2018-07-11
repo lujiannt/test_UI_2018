@@ -1,5 +1,5 @@
 //tab标签及主页其他相关样式功能
-//TODO 1.使用map保存当前tab,最多只能打开5个，要不然存的太多 2.结果删除tab报的错误
+//TODO 1.使用map保存当前tab，点击左侧链接和tab时不要重新加载 2.结果删除tab报的错误
 $(function () {
 	//tab页面对对应url映射
 	var tabHtmlMap = new Map();
@@ -65,30 +65,33 @@ $(function () {
 	//点击链接时，如果tab已存在,则激活
 	//不存在，则要判断tab数量是否超过最大限制
 	$.fn.addTabsPills = function (option) {
+		var flag = false;
 		var opentabs = $(".nav-link-tab");
-		if((opentabs.length+1) > maxTagsNum) {
-			var flag = false;
-			$.each(opentabs,function(index,value){
-				if($(this).attr('id') == option.id) {
-					flag = true;
-				}
-			});
-			if(flag) {
-				showTab(option);
-			}else {
+		$.each(opentabs,function(index,value){
+			if($(this).attr('id') == option.id) {
+				flag = true;
+			}
+		});
+		alert(flag);
+		if(flag) {
+			showOldTab(option);
+		}else {
+			if((opentabs.length+1) > maxTagsNum) {
 				//TODO alert弹框
 				alert("最多"+maxTagsNum+"个标签页");
+			}else {
+				showNewTab(option);
 			}
-		}else {
-			showTab(option);
 		}
 	}
 	
 	//新增胶囊式tab
-	function showTab(option) {
-		$(".nav-link-tab").removeClass("active");
+	function showNewTab(option) {
+		saveOldTabContent();
 		
 		//tab
+		$(".nav-link-tab").removeClass("active");
+		
 		if($("#"+option.id)[0]!=null) {
 			$("#"+option.id).addClass("active");
 		}else {
@@ -123,19 +126,39 @@ $(function () {
 		    $("#tabs-caozuo").before(a);
 		}
 		
-		//content
-//		var ttt = $("#target");
-//		var frameObj = document.getElementById("tabContent"); 
-//		alert(frameObj.contentWindow.document.body.innerHTML);
+		//iframe中加载content
 		showTabContent(target,option);
 	}
 
+	//map中跳转到新tab前保存上个tab中的html
+	function saveOldTabContent() {
+		var opentabs = $(".nav-link-tab");
+		var activetabs = $(".active");
+		if(opentabs.length > 0) {
+			$.each(activetabs,function(index,value){
+				var frameObj = document.getElementById("tabContent"); 
+				var html = frameObj.contentWindow.document.body.innerHTML;
+				tabHtmlMap.put($(this).attr("id"), html);
+				//alert(tabHtmlMap.get($(this).attr("id")));
+			});
+		}
+	}
+	
 	//清除tab
 	$.fn.cleanTabs = function (option) {
 		clearTabs(option);
 	}
 	
-	
+	//激活老的tab
+	function showOldTab(option) {
+		saveOldTabContent();
+		
+		$(".nav-link-tab").removeClass("active");
+		$("#"+option.id).addClass("active");
+		
+		//iframe中加载content
+		target.html(tabHtmlMap.get(option.id));
+	}
 	
 	
 	//----------------------------业务实现-------------------------------
