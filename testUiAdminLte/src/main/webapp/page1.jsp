@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
+<script type="text/javascript" src="js/basic/require.js" data-main="js/basic/main.js"></script>
 </head>
 <body>
 	<H1>page1</H1>
