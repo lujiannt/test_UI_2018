@@ -35,6 +35,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<script src="lte/plugins/bootstrap-tab/js/dropdown.js"></script>
 	<script src="lte/plugins/bootstrap-tab/js/util.js"></script>
 	<script src="lte/plugins/bootstrap-tab/js/dynamic-tabs.js"></script>
+	
+	<!-- basic -->
+	<script src="js/basic/pop.js"></script>
+	<script src="js/basic/common.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -197,7 +201,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
 <script>
 </script>
 </body>

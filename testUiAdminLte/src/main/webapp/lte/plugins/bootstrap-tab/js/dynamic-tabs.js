@@ -1,5 +1,11 @@
+//tab标签及主页其他相关样式功能
+//TODO 1.使用map保存当前tab,最多只能打开5个，要不然存的太多 2.结果删除tab报的错误
 $(function () {
-	//TODO 1.使用map保存当前tab,最多只能打开5个，要不然存的太多 2.结果删除tab报的错误 
+	//tab页面对对应url映射
+	var tabHtmlMap = new Map();
+	//最多tab数
+	var maxTagsNum = 3;
+	//iframe窗口
 	var target = $("#tabContent");
 	
 	//content
@@ -56,9 +62,30 @@ $(function () {
 		$(".cleanTabs").hide();
 	}
 
-	//胶囊式tab
+	//点击链接时，如果tab已存在,则激活
+	//不存在，则要判断tab数量是否超过最大限制
 	$.fn.addTabsPills = function (option) {
-		var tab = $(this);
+		var opentabs = $(".nav-link-tab");
+		if((opentabs.length+1) > maxTagsNum) {
+			var flag = false;
+			$.each(opentabs,function(index,value){
+				if($(this).attr('id') == option.id) {
+					flag = true;
+				}
+			});
+			if(flag) {
+				showTab(option);
+			}else {
+				//TODO alert弹框
+				alert("最多"+maxTagsNum+"个标签页");
+			}
+		}else {
+			showTab(option);
+		}
+	}
+	
+	//新增胶囊式tab
+	function showTab(option) {
 		$(".nav-link-tab").removeClass("active");
 		
 		//tab
@@ -97,6 +124,9 @@ $(function () {
 		}
 		
 		//content
+//		var ttt = $("#target");
+//		var frameObj = document.getElementById("tabContent"); 
+//		alert(frameObj.contentWindow.document.body.innerHTML);
 		showTabContent(target,option);
 	}
 
