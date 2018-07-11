@@ -81,6 +81,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			</a>
 		</li>
 	</ul>
+	
+	<ul class="navbar-nav ml-auto" id="tabs-caozuo">
+    	<li class="nav-item d-none d-sm-inline-block">
+        	<a href="#" class="nav-link" id="refreshTab">
+	        	<i class="icon iconfont icon-icon-refresh"></i>
+	       		&nbsp;
+	        </a>
+      	</li> 
+    </ul>
 </nav>
 <!-- /.navbar -->
 

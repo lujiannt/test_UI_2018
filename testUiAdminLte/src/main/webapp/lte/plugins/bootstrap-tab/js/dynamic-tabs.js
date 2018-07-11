@@ -1,5 +1,5 @@
 $(function () {
-	//TODO 1.使用map保存当前tab 2.结果删除tab报的错误
+	//TODO 1.使用map保存当前tab,最多只能打开5个，要不然存的太多 2.结果删除tab报的错误 
 	var target = $("#tabContent");
 	
 	//content
@@ -58,7 +58,7 @@ $(function () {
 
 	//胶囊式tab
 	$.fn.addTabsPills = function (option) {
-		var nav = $(this);
+		var tab = $(this);
 		$(".nav-link-tab").removeClass("active");
 		
 		//tab
@@ -93,7 +93,7 @@ $(function () {
 		    
 		    a.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 		    a.append(icon);
-		    nav.append(a);
+		    $("#tabs-caozuo").before(a);
 		}
 		
 		//content
@@ -137,4 +137,14 @@ $(function () {
 			"url" : "home.jsp"
 		})
 	});
+	
+	//刷新当前页
+	$("#refreshTab").bind("click",function(){
+		var activetabs = $(".active");
+		if(activetabs.length == 1){
+			$.each(activetabs,function(index,value){
+				target.attr("src",$(this).attr("tabUrl"));
+			});
+		}
+	})
 });
