@@ -131,21 +131,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a tabId="ChartJS" title="ChartJS" url="page1.jsp" href="#" class="nav-link nav-link-url">
+              <a tabId="page1" title="page1" url="page1.jsp" href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
-                <p>ChartJS</p>
+                <p>page1</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="Flot" title="Flot" url="page2.jsp" href="#" class="nav-link nav-link-url">
+              <a tabId="page2" title="page2" url="page2.jsp" href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
-                <p>Flot</p>
+                <p>page2</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="Inline" title="Inline" url="page3.jsp"  href="#" class="nav-link nav-link-url">
+              <a tabId="page3" title="page3" url="page3.jsp"  href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
-                <p>Inline</p>
+                <p>page3</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a tabId="baidu" title="baidu" url="https://baidu.com"  href="#" class="nav-link nav-link-url">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>baidu</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a tabId="jquery" title="jquery" url="https://jQuery.com"  href="#" class="nav-link nav-link-url">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>jquery</p>
               </a>
             </li>
           </ul>
