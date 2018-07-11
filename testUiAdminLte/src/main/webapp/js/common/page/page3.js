@@ -1,3 +1,3 @@
-define(function(){
-	
-})
+function funsad() {
+	$("#hee2").html("hello world");
+}

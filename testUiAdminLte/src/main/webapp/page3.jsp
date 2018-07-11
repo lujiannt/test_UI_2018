@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="js/basic/require.js"></script>
-<script type="text/javascript" src="js/common/page/page1.js"></script>
+
+<jsp:include  page="header.jsp"/>
 </head>
 <body>
 	<H1>page3</H1>

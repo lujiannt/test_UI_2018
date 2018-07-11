@@ -157,7 +157,7 @@ $(function () {
 		
 		//iframe中加载content
 		var htmlContent = tabHtmlMap.get(option.id);
-		alert(htmlContent);
+//		alert(htmlContent);
 		$("#tabContent").contents().find("body").html(htmlContent);
 
 	}
