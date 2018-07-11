@@ -72,7 +72,6 @@ $(function () {
 				flag = true;
 			}
 		});
-		alert(flag);
 		if(flag) {
 			showOldTab(option);
 		}else {
@@ -157,7 +156,10 @@ $(function () {
 		$("#"+option.id).addClass("active");
 		
 		//iframe中加载content
-		target.html(tabHtmlMap.get(option.id));
+		var htmlContent = tabHtmlMap.get(option.id);
+		alert(htmlContent);
+		$("#tabContent").contents().find("body").html(htmlContent);
+
 	}
 	
 	
