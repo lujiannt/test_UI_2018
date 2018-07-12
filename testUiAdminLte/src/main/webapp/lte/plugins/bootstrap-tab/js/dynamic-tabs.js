@@ -1,5 +1,5 @@
 //tab标签及主页其他相关样式功能
-//TODO 1.使用map保存当前tab，点击左侧链接和tab时不要重新加载 2.结果删除tab报的错误
+//TODO 1.使用map保存当前tab，点击左侧链接和tab时不要重新加载 2.结果删除tab报的错误 3.刷新也要清空map 4.alert弹框
 $(function () {
 	//tab页面对对应url映射
 	var tabHtmlMap = new Map();
@@ -76,7 +76,6 @@ $(function () {
 			showOldTab(option);
 		}else {
 			if((opentabs.length+1) > maxTagsNum) {
-				//TODO alert弹框
 				alert("最多"+maxTagsNum+"个标签页");
 			}else {
 				showNewTab(option);
@@ -102,8 +101,13 @@ $(function () {
 		        "text": option.title,
 		        "tabUrl": option.url,
 		        "click": function () {
-		        	if($(this)!=null)
-		        		showTabContent(target, option);
+		        		saveOldTabContent();
+		        		
+		        		var oldtab = tabHtmlMap.get(option.id);
+			    		target.attr("src",oldtab.url);
+			    		setTimeout(function(){
+			    			$("#tabContent").contents().find("body").html(oldtab.html);
+			    		}, 100);
 		        }
 		    });
 		    
@@ -129,7 +133,7 @@ $(function () {
 		showTabContent(target,option);
 	}
 
-	//map中跳转到新tab前保存上个tab中的html
+	//跳转到新tab前在map中保存上个tab中的相关信息
 	function saveOldTabContent() {
 		var opentabs = $(".nav-link-tab");
 		var activetabs = $(".active");
@@ -137,8 +141,14 @@ $(function () {
 			$.each(activetabs,function(index,value){
 				var frameObj = document.getElementById("tabContent"); 
 				var html = frameObj.contentWindow.document.body.innerHTML;
-				tabHtmlMap.put($(this).attr("id"), html);
-				//alert(tabHtmlMap.get($(this).attr("id")));
+				var oldtab = {
+						"url" : $(this).attr("tabUrl"),
+						"html" : html
+				}
+				tabHtmlMap.put($(this).attr("id"), oldtab);
+				
+				var oldTab = tabHtmlMap.get($(this).attr("id"));
+				alert(oldTab.url);
 			});
 		}
 	}
@@ -156,10 +166,12 @@ $(function () {
 		$("#"+option.id).addClass("active");
 		
 		//iframe中加载content
-		var htmlContent = tabHtmlMap.get(option.id);
+		var oldtab = tabHtmlMap.get(option.id);
 //		alert(htmlContent);
-		$("#tabContent").contents().find("body").html(htmlContent);
-
+		target.attr("src",oldtab.url);
+		setTimeout(function(){
+			$("#tabContent").contents().find("body").html(oldtab.html);
+		}, 100);
 	}
 	
 	
@@ -199,6 +211,14 @@ $(function () {
 		if(activetabs.length == 1){
 			$.each(activetabs,function(index,value){
 				target.attr("src",$(this).attr("tabUrl"));
+				
+				var frameObj = document.getElementById("tabContent"); 
+				var html = frameObj.contentWindow.document.body.innerHTML;
+				var oldtab = {
+						"url" : $(this).attr("tabUrl"),
+						"html" : html
+				}
+				tabHtmlMap.put($(this).attr("id"), oldtab);
 			});
 		}
 	})
