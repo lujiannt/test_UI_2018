@@ -28,8 +28,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<!-- AdminLTE App -->
 	<script src="lte/dist/js/adminlte.min.js"></script>
 	<!-- Bootstrap 4 -->
-	<script src="lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<!-- Bootstrap 4 tab -->
+	<script src="lte/plugins/bootstrap/js/bootstrap.bundle.js"></script>
+	
+	<!-- Bootstrap 4 -->
 	<script src="lte/plugins/bootstrap-tab/js/popper.min.js"></script>
 	<script src="lte/plugins/bootstrap-tab/js/tab.js"></script>
 	<script src="lte/plugins/bootstrap-tab/js/dropdown.js"></script>

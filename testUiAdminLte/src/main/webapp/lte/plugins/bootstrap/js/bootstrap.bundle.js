@@ -6273,25 +6273,30 @@
 
         var activeElements;
 
-        if (container.nodeName === 'UL') {
-          activeElements = $$$1(container).find(Selector.ACTIVE_UL);
-        } else {
-          activeElements = $$$1(container).children(Selector.ACTIVE);
+        if(container!=null) {
+        	if (container.nodeName === 'UL') {
+                activeElements = $$$1(container).find(Selector.ACTIVE_UL);
+              } else {
+                activeElements = $$$1(container).children(Selector.ACTIVE);
+              }
+        	
+        	var active = activeElements[0];
+            var isTransitioning = callback && active && $$$1(active).hasClass(ClassName.FADE);
+
+            var complete = function complete() {
+              return _this2._transitionComplete(element, active, callback);
+            };
+
+            if (active && isTransitioning) {
+              var transitionDuration = Util.getTransitionDurationFromElement(active);
+              $$$1(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+            } else {
+              complete();
+            }
         }
+        
 
-        var active = activeElements[0];
-        var isTransitioning = callback && active && $$$1(active).hasClass(ClassName.FADE);
-
-        var complete = function complete() {
-          return _this2._transitionComplete(element, active, callback);
-        };
-
-        if (active && isTransitioning) {
-          var transitionDuration = Util.getTransitionDurationFromElement(active);
-          $$$1(active).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
-        } else {
-          complete();
-        }
+        
       };
 
       _proto._transitionComplete = function _transitionComplete(element, active, callback) {
