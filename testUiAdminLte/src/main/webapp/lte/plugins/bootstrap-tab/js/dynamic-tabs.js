@@ -28,12 +28,14 @@ $(function () {
 		if(length == 0) {
 			$(".nav-link-tab").removeClass("active");
 			$("#"+option.id).remove();
+			tabHtmlMap.remove(option.id);
 			target.attr("src","home.jsp");
 		}else {
 			if(activetabs.length == 1){
 				$.each(activetabs,function(index,value){
 					if($(this).attr("id") != option.id) {
 						$("#"+option.id).remove();
+						tabHtmlMap.remove(option.id);
 						flag = false;
 					}
 				});
@@ -42,11 +44,17 @@ $(function () {
 			if(flag) {
 				$(".nav-link-tab").removeClass("active");
 				$("#"+option.id).remove();
+				tabHtmlMap.remove(option.id);
 				var newtabs = $(".nav-link-tab");
 				$.each(newtabs,function(index,value){
 					if(index == length-1) {
 						$("#"+$(this).attr('id')).addClass("active");
-						target.attr("src",$(this).attr('tabUrl'));
+						
+						var oldtab = tabHtmlMap.get($(this).attr('id'));
+						target.attr("src",oldtab.url);
+						setTimeout(function(){
+							$("#tabContent").contents().find("body").html(oldtab.html);
+						}, 100);
 					}
 				});
 			}
@@ -87,7 +95,6 @@ $(function () {
 	function showNewTab(option) {
 		saveOldTabContent();
 		
-		//tab
 		$(".nav-link-tab").removeClass("active");
 		
 		if($("#"+option.id)[0]!=null) {
@@ -138,24 +145,20 @@ $(function () {
 		var opentabs = $(".nav-link-tab");
 		var activetabs = $(".active");
 		if(opentabs.length > 0) {
-			$.each(activetabs,function(index,value){
-				var frameObj = document.getElementById("tabContent"); 
-				var html = frameObj.contentWindow.document.body.innerHTML;
-				var oldtab = {
-						"url" : $(this).attr("tabUrl"),
-						"html" : html
-				}
-				tabHtmlMap.put($(this).attr("id"), oldtab);
-				
-				var oldTab = tabHtmlMap.get($(this).attr("id"));
-				alert(oldTab.url);
-			});
+			if(activetabs.length > 0) {
+				$.each(activetabs,function(index,value){
+					var frameObj = document.getElementById("tabContent"); 
+					var html = frameObj.contentWindow.document.body.innerHTML;
+					var oldtab = {
+							"url" : $(this).attr("tabUrl"),
+							"html" : html
+					}
+					tabHtmlMap.put($(this).attr("id"), oldtab);
+					
+					var oldTab = tabHtmlMap.get($(this).attr("id"));
+				});
+			}
 		}
-	}
-	
-	//清除tab
-	$.fn.cleanTabs = function (option) {
-		clearTabs(option);
 	}
 	
 	//激活老的tab
@@ -167,13 +170,16 @@ $(function () {
 		
 		//iframe中加载content
 		var oldtab = tabHtmlMap.get(option.id);
-//		alert(htmlContent);
 		target.attr("src",oldtab.url);
 		setTimeout(function(){
 			$("#tabContent").contents().find("body").html(oldtab.html);
 		}, 100);
 	}
 	
+	//清除tab
+	$.fn.cleanTabs = function (option) {
+		clearTabs(option);
+	}
 	
 	//----------------------------业务实现-------------------------------
 	var tab = $("#myTabs");	

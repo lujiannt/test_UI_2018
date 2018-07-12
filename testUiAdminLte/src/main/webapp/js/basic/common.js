@@ -30,8 +30,15 @@ function Map() {
      * 删除一个键值对   
      * @param {String} key   
      */    
-    this.remove = function(key) {     
-        this.keys.remove(key);     
+    this.remove = function(key) {
+    	var keys = this.keys;
+    	for(var i=0;i<keys.length;i++) {
+    		if(keys[i] == key) {
+    			this.keys.baoremove(i);
+    			alert("success");
+    		}
+    	}
+//    	this.keys.remove(key);     
         this.data[key] = null;     
     };     
          
@@ -94,3 +101,10 @@ function Map() {
         return s;     
     };     
 }
+
+//根据数组下标删除数组元素
+Array.prototype.baoremove = function(index) 
+{ 
+  if(isNaN(index)||index>this.length){return false;} 
+  this.splice(index,1); 
+} 
