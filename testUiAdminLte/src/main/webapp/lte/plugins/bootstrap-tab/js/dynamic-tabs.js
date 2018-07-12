@@ -1,5 +1,5 @@
 //tab标签及主页其他相关样式功能
-//TODO 1.使用map保存当前tab，点击左侧链接和tab时不要重新加载 2.结果删除tab报的错误  4.alert弹框
+//TODO 1.使用map保存当前tab，点击左侧链接和tab时不要重新加载   4.alert弹框
 $(function () {
 	//tab页面对对应url映射
 	var tabHtmlMap = new Map();
