@@ -1,67 +1,83 @@
 //tab标签及主页其他相关样式功能
 $(function () {
+	//最多标签页
+	var maxTabsNum = 3;
+	
 	//显示tab
-	var addTabsPills = function (option) {
-		if($("#tab_"+option.id)[0]==null) {
-			var a = $("<a />", {
-		    	"id": "tab_"+option.id,
-		    	"href":"#",
-		        "class": "nav-link nav-item nav-link-tab",
-		        "data-toggle": "tab",
-		        "text": option.title,
-		        "tabUrl": option.url,
-		        "optionId":	option.id,
-		        "click": function () {
-		        	$(".nav-link-tab").removeClass("active");
-		    		$(".tab_row").hide();
-		    		$("#tab_"+option.id).addClass("active");
-		    		$("#tab_row_"+option.id).show();
-		        }
-		    });
-		    
-		    var icon = $("<i />", {
-		    	"class" : "icon iconfont icon-aui-icon-close",
-		    	"mouseenter": function(){
-		    		$(this).attr("class","icon iconfont icon-close");
-		    	},
-		    	"mouseout": function(){
-		    		$(this).attr("class","icon iconfont icon-aui-icon-close");
-		    	},
-		        "click": function () {
-		        	clearTab(option);
-		        }
-		    }); 
-		    
-		    var div = $("<div />", {
-				"id":"tab_row_"+option.id,
-				"optionId":	option.id,
-				"class":"row tab_row",
-				"style":"width:"+$(".tabContent").width+"px;height:750px"
-				
-			});
-			
-			var iframe = $("<iframe />", {
-				"id":"tab_iframe_"+option.id,
-				"src":option.url,
-				"class":"tab_iframe",
-				"scrolling":"auto",
-				"frameborder":"0",
-				
-			});
-			
-			a.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-			a.append(icon);
-			$("#tabs-caozuo").before(a);
-			
-			$(".tab_row").hide();
-			div.append(iframe);
-			$("#tabContent").append(div);
-		}
-		
+	var showTab = function(option) {
 		$(".nav-link-tab").removeClass("active");
 		$(".tab_row").hide();
 		$("#tab_"+option.id).addClass("active");
 		$("#tab_row_"+option.id).show();
+	}
+	
+	//新增tab
+	var addTabsPills = function (option) {
+		var opentabs = $(".nav-link-tab");
+		
+		if($("#tab_"+option.id)[0]==null) {
+			if((opentabs.length+1) > maxTabsNum) {
+				alert("最多"+maxTabsNum+"个标签页");
+			}else {
+				var a = $("<a />", {
+			    	"id": "tab_"+option.id,
+			    	"href":"#",
+			        "class": "nav-link nav-item nav-link-tab",
+			        "data-toggle": "tab",
+			        "text": option.title,
+			        "tabUrl": option.url,
+			        "optionId":	option.id,
+			        "click": function () {
+			        	$(".nav-link-tab").removeClass("active");
+			    		$(".tab_row").hide();
+			    		$("#tab_"+option.id).addClass("active");
+			    		$("#tab_row_"+option.id).show();
+			        }
+			    });
+			    
+			    var icon = $("<i />", {
+			    	"class" : "icon iconfont icon-aui-icon-close",
+			    	"mouseenter": function(){
+			    		$(this).attr("class","icon iconfont icon-close");
+			    	},
+			    	"mouseout": function(){
+			    		$(this).attr("class","icon iconfont icon-aui-icon-close");
+			    	},
+			        "click": function () {
+			        	clearTab(option);
+			        }
+			    }); 
+			    
+			    var div = $("<div />", {
+					"id":"tab_row_"+option.id,
+					"optionId":	option.id,
+					"class":"row tab_row",
+					"style":"width:"+$(".tabContent").width+"px;height:750px"
+					
+				});
+				
+				var iframe = $("<iframe />", {
+					"id":"tab_iframe_"+option.id,
+					"src":option.url,
+					"class":"tab_iframe",
+					"scrolling":"auto",
+					"frameborder":"0",
+					
+				});
+				
+				a.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+				a.append(icon);
+				$("#tabs-caozuo").before(a);
+				
+				$(".tab_row").hide();
+				div.append(iframe);
+				$("#tabContent").append(div);
+				
+				showTab(option);
+			}
+		}else {
+			showTab(option);
+		}
 	}
 	
 	//删除tab
