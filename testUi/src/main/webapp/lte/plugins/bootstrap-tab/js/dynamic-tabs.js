@@ -1,3 +1,7 @@
+//TODO 1.左侧菜单树由json生成
+//TODO 2.弹出框，警告栏
+//TODO 3.搭建后台框架
+//TODO 4.表格分页demo(使用json动态生成，编辑删除等功能也是这样，不是在页面上写的那种)
 //tab标签及主页其他相关样式功能
 $(function () {
 	//最多标签页
@@ -121,7 +125,6 @@ $(function () {
 						$("#tab_row_"+$(this).attr('optionId')).show();
 					}
 				});
-				
 			}
 		}
 	}
