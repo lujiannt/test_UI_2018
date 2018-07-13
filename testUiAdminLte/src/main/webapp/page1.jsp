@@ -7,9 +7,22 @@
 <title>Insert title here</title>
 
 <jsp:include  page="header.jsp"/>
+
+<script type="text/javascript">
+	var i=0;
+	function addI() {
+		i++;
+		console.log("i="+i);
+	}
+	
+	function funsad() {
+		$("#hee2").html("hello world");
+	}
+</script>
 </head>
 <body>
 	<H1>page1</H1>
 	<h2 id="hee2" onclick="funsad()">click me</h2>
+	<h2 id="hee2" onclick="addI()">i++</h2>
 </body>
 </html>
