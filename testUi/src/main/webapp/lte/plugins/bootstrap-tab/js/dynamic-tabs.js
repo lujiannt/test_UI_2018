@@ -128,7 +128,7 @@ $(function () {
 	
 	//----------------------------业务实现-------------------------------
 	//点击主页
-	$("#homeTab").bind("click", function(){
+	$(".homeTab").bind("click", function(){
 		$(".nav-link-tab").removeClass("active");
 		$(".tab_row").hide();
 		$("#tab_row_home").show();
