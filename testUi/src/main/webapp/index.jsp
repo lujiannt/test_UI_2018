@@ -174,10 +174,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     	<!-- /.content-header -->
 
     	<!-- Main content -->
-    	<div class="content" id="tabContent" style="margin-left:0px;margin-right:0px">
-       		<div class="row tab_row" id="tab_row_home" >
-				<iframe id="tab_iframe_home" src="home.jsp" class="tab_iframe" scrolling="auto" frameborder="0">
-				</iframe>
+    	<div class="content">
+       		<div class="row" id="tabContent" style="margin-left:5px;margin-right:5px">
+       			<div class="col-sm-12 tab_row" id="tab_row_home">
+					<iframe id="tab_iframe_home" src="home.jsp" class="tab_iframe" scrolling="auto" frameborder="0">
+					</iframe>
+       			</div>
        		</div>
         	<!-- /.row -->
       		<!-- /.container-fluid -->

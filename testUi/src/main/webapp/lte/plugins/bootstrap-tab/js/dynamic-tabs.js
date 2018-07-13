@@ -55,9 +55,8 @@ $(function () {
 			    var div = $("<div />", {
 					"id":"tab_row_"+option.id,
 					"optionId":	option.id,
-					"class":"row tab_row",
-					"style":"width:"+$(".tabContent").width+"px;height:750px"
-					
+					"class":"col-sm-12 tab_row",
+					"style":"width:"+$(".tabContent").width+"px;height:560px"
 				});
 				
 				var iframe = $("<iframe />", {

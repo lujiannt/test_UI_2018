@@ -8,7 +8,6 @@
 <jsp:include  page="header.jsp"/>
 </head>
 <body>
-	<div class="card">
           <div class="card-header">
              <h3 class="card-title">Hover Data Table</h3>
            </div>
@@ -445,8 +444,6 @@
               </table>
             </div>
             <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
 
 </body>
 </html>

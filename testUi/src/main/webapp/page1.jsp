@@ -21,8 +21,10 @@
 </script>
 </head>
 <body>
+<aside>
 	<H1>page1</H1>
 	<h2 id="hee2" onclick="funsad()">click me</h2>
 	<h2 id="hee2" onclick="addI()">i++</h2>
+</aside>
 </body>
 </html>
