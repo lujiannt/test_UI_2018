@@ -11,17 +11,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	
-	<title>AdminLTE 3 | Starter</title>
+	<title>index</title>
 	
 	<!-- Font Awesome Icons -->
 	<link rel="stylesheet" href="lte/plugins/font-awesome/css/font-awesome.min.css">
 	<!-- Theme style -->
-	<link rel="stylesheet" href="lte/dist/css/adminlte.min.css">
+	<link rel="stylesheet" href="lte/dist/css/adminlte.css">
 	<!-- Google Font: Source Sans Pro -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 	<!-- icon style -->
 	<link rel="stylesheet" type="text/css" href="lte/custom/icon/font-class/iconfont.css">
-  
+  	<link rel="stylesheet" type="text/css" href="css/basic/index.css">
   
 	<!-- jQuery -->
 	<script src="lte/plugins/jquery/jquery.min.js"></script>
@@ -37,9 +37,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<script src="lte/plugins/bootstrap-tab/js/util.js"></script>
 	<script src="lte/plugins/bootstrap-tab/js/dynamic-tabs.js"></script>
 	
-	<!-- basic -->
-	<script src="js/basic/pop.js"></script>
-	<script src="js/basic/common.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -178,9 +175,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     	<!-- Main content -->
     	<div class="content" >
-      		<div class="container-fluid">
-        		<div class="row" >
-					<iframe src="home.jsp" id="tabContent" scrolling="auto" frameborder="0" style="width:100%;height:800px">
+      		<div class="container-fluid" id="tabContent">
+        		<div class="row tab_row" id="tab_row_home" >
+					<iframe id="tab_iframe_home" src="home.jsp" class="tab_iframe" scrolling="auto" frameborder="0">
 					</iframe>
         		</div>
         	<!-- /.row -->
@@ -192,15 +189,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	  <!-- /.content-wrapper -->
 
  	<!-- Control Sidebar -->
-	<aside class="control-sidebar control-sidebar-dark">
-	   	<!-- Control sidebar content goes here -->
-	   	<div class="p-3">
-	    	<h5>Title</h5>
-	     	<p>Sidebar content</p>
-	   	</div>
-	</aside>
  	<!-- /.control-sidebar -->
 
+	<div class="content-header">
+	    </div>
   	<!-- Main Footer -->
 	<footer class="main-footer">
   		<!-- To the right -->
