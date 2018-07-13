@@ -154,8 +154,6 @@ $(function () {
 							"html" : html
 					}
 					tabHtmlMap.put($(this).attr("id"), oldtab);
-					
-					var oldTab = tabHtmlMap.get($(this).attr("id"));
 				});
 			}
 		}
