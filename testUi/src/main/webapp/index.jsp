@@ -174,33 +174,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
     	<!-- /.content-header -->
 
     	<!-- Main content -->
-    	<div class="content" >
-      		<div class="container-fluid" id="tabContent">
+    	<div class="content" id="tabContent" style="margin-left:0px;margin-right:0px">
         		<div class="row tab_row" id="tab_row_home" >
 					<iframe id="tab_iframe_home" src="home.jsp" class="tab_iframe" scrolling="auto" frameborder="0">
 					</iframe>
         		</div>
         	<!-- /.row -->
-      		</div>
       		<!-- /.container-fluid -->
     	</div>
     	<!-- /.content -->
 	</div>
-	  <!-- /.content-wrapper -->
+	<!-- /.content-wrapper -->
 
- 	<!-- Control Sidebar -->
- 	<!-- /.control-sidebar -->
-
-	<div class="content-header">
-	    </div>
+	<aside class="control-sidebar control-sidebar-dark">
+	   	<!-- Control sidebar content goes here -->
+	   	<div class="p-3">
+	    	<h5>Title</h5>
+	     	<p>Sidebar content</p>
+	   	</div>
+	</aside>
   	<!-- Main Footer -->
 	<footer class="main-footer">
   		<!-- To the right -->
 		<div class="float-right d-none d-sm-inline">
-  			Anything you want
+  			by lj
 		</div>
 		<!-- Default to the left -->
-	  	<strong>Copyright &copy; 2014-2018 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+	  	<strong>Copyright &copy; 2018-07-13 <a target="_blank" href="http://www.cnblogs.com/lujiannt/">lujiannt</a>.</strong> All rights reserved.
 	</footer>
 </div>
 <!-- ./wrapper -->
