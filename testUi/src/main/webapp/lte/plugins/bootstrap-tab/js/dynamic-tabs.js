@@ -65,6 +65,7 @@ $(function () {
 					"class":"tab_iframe",
 					"scrolling":"auto",
 					"frameborder":"0",
+					"onload":"this.height=this.contentWindow.document.documentElement.scrollHeight"
 					
 				});
 				
