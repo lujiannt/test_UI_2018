@@ -41,8 +41,9 @@
 		<mvc:interceptors>
 			<mvc:interceptor>
 				<mvc:mapping path="/**"/>
-				<bean class="com.lj.ssm.interceptor.LoginInterceptor"></bean>
+				<bean class="com.lj.interceptor.LoginInterceptor"></bean>
 			</mvc:interceptor>
 		</mvc:interceptors>
 		-->
+		
 </beans>
