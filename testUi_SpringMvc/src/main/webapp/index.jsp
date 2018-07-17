@@ -202,7 +202,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   			by lj
 		</div>
 		<!-- Default to the left -->
-	  	<strong>Copyright &copy; 2018-07-13 <a target="_blank" href="http://www.cnblogs.com/lujiannt/">lujiannt</a>.</strong> All rights reserved.
+	  	<strong>Copyright &copy; 2018-07-13 <a target="_blank" href="https://github.com/lujiannt">lujiannt</a>.</strong> All rights reserved.
 	</footer>
 </div>
 <!-- ./wrapper -->
