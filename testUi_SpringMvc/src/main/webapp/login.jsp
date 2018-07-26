@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Log in</title>
+  <title>login</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,11 +14,20 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="lte/dist/css/adminlte.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lte/dist/css/adminlte.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="lte/plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/lte/plugins/iCheck/square/blue.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  
+  <!-- jQuery -->
+  <script src="<%=request.getContextPath()%>/lte/plugins/jquery/jquery.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="${pageContext.request.contextPath}/lte/dist/js/adminlte.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="${pageContext.request.contextPath}/lte/plugins/bootstrap/js/bootstrap.bundle.js"></script>
+  <!-- iCheck -->
+  <script src="${pageContext.request.contextPath}/lte/plugins/iCheck/icheck.min.js"></script>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
@@ -54,20 +63,6 @@
 </div>
 <!-- /.login-box -->
 
-<!-- AdminLTE App -->
-<script src="lte/dist/js/adminlte.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="lte/plugins/bootstrap/js/bootstrap.bundle.js"></script>
-<!-- iCheck -->
-<script src="lte/plugins/iCheck/icheck.min.js"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass   : 'iradio_square-blue',
-      increaseArea : '20%' // optional
-    })
-  })
-</script>
+
 </body>
 </html>

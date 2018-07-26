@@ -5,9 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Page2</title>
-<jsp:include  page="header.jsp"/>
+<jsp:include  page="../header.jsp"/>
 </head>
-<body>
+<body style="background-color:transparent">
+	<h1>page2</h1>
+	
 	<div class="card">
               <div class="card-header">
                 <h3 class="card-title">Bordered Table</h3>

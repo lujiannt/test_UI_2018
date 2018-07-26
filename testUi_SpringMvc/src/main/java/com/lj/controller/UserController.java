@@ -34,7 +34,7 @@ public class UserController {
 	
 	@RequestMapping("/loginToIndex")
 	public String loginToIndex(HttpSession session, User user) {
-		return "index";
+		return "redirect: /hello/index";
 	}
 
 }

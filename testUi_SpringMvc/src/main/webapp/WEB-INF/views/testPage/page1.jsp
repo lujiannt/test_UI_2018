@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Page1</title>
 
-<jsp:include  page="header.jsp"/>
+<jsp:include  page="../header.jsp"/>
 
 <script type="text/javascript">
 	var i=0;
@@ -23,8 +23,13 @@
 <body>
 <aside>
 	<H1>page1</H1>
+	<div class="card">
 	<h2 id="hee2" onclick="funsad()">click me</h2>
 	<h2 id="hee2" onclick="addI()">i++</h2>
+	</div>
+	
+	
+	
 </aside>
 </body>
 </html>

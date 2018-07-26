@@ -13,30 +13,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	
 	<title>index</title>
 	
-	<!-- Font Awesome Icons -->
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/lte/plugins/font-awesome/css/font-awesome.min.css">
-	<!-- Theme style -->
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/lte/dist/css/adminlte.css">
-	<!-- Google Font: Source Sans Pro -->
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-	<!-- icon style -->
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/lte/custom/icon/font-class/iconfont.css">
-  	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/basic/index.css">
-  
-	<!-- jQuery -->
-	<script src="${pageContext.request.contextPath}/lte/plugins/jquery/jquery.min.js"></script>
-	<!-- AdminLTE App -->
-	<script src="${pageContext.request.contextPath}/lte/dist/js/adminlte.min.js"></script>
+	<jsp:include  page="header.jsp"/>
 	<!-- Bootstrap 4 -->
-	<script src="${pageContext.request.contextPath}/lte/plugins/bootstrap/js/bootstrap.bundle.js"></script>
-	
-	<!-- Bootstrap 4 -->
-	<script src="${pageContext.request.contextPath}/lte/plugins/bootstrap-tab/js/popper.min.js"></script>
-	<script src="${pageContext.request.contextPath}/lte/plugins/bootstrap-tab/js/tab.js"></script>
-	<script src="${pageContext.request.contextPath}/lte/plugins/bootstrap-tab/js/dropdown.js"></script>
-	<script src="${pageContext.request.contextPath}/lte/plugins/bootstrap-tab/js/util.js"></script>
-	<script src="${pageContext.request.contextPath}/lte/plugins/bootstrap-tab/js/dynamic-tabs.js"></script>
-	
+	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/popper.min.js"></script>
+	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/tab.js"></script>
+	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/dropdown.js"></script>
+	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/util.js"></script>
+	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/dynamic-tabs.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -108,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
 		<div class="image">
-        	<img src="${pageContext.request.contextPath}/lte/dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+        	<img src="<%=request.getContextPath()%>/lte/dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
       	</div>
     	<i class="icon iconfont icon-user"></i>
       	<div class="info">
@@ -129,27 +112,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a tabId="page1" title="page1" url="${pageContext.request.contextPath}/page1.jsp" href="#" class="nav-link nav-link-url">
+              <a tabId="page1" title="page1" url="/hello/page1" href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>page1</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="page2" title="page2" url="${pageContext.request.contextPath}/page2.jsp" href="#" class="nav-link nav-link-url">
+              <a tabId="page2" title="page2" url="/hello/page2" href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>page2</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="page3" title="page3" url="${pageContext.request.contextPath}/page3.jsp"  href="#" class="nav-link nav-link-url">
+              <a tabId="page3" title="page3" url="/hello/page3"  href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>page3</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="baidu" title="baidu" url="https://baidu.com"  href="#" class="nav-link nav-link-url">
+              <a tabId="baidu" title="hello" url="/hello/hello"  href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
-                <p>baidu</p>
+                <p>hello</p>
               </a>
             </li>
             <li class="nav-item">
@@ -177,8 +160,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     	<div class="content">
        		<div class="row" id="tabContent" style="margin-left:5px;margin-right:5px">
        			<div class="col-sm-12 tab_row" id="tab_row_home">
-					<iframe id="tab_iframe_home" src="${pageContext.request.contextPath}/home.jsp" class="tab_iframe" scrolling="auto" frameborder="0">
+<!-- 	       			<iframe allowtransparency="true" id="tab_iframe_home" src="home.jsp" class="tab_iframe" scrolling="auto" frameborder="0">
 					</iframe>
+ -->				<jsp:include  page="home.jsp"/>
        			</div>
        		</div>
         	<!-- /.row -->
