@@ -21,17 +21,17 @@ public class HelloController {
 	
 	@RequestMapping("/page1")
 	public String page1() {
-		return "/testPage/page1";
+		return "/hello/page1";
 	}
 	
 	@RequestMapping("/page2")
 	public String page2() {
-		return "/testPage/page2";
+		return "/hello/page2";
 	}
 	
 	@RequestMapping("/page3")
 	public String page3() {
-		return "/testPage/page3";
+		return "/hello/page3";
 	}
 	
 	@RequestMapping("/hello")
