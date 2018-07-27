@@ -12,14 +12,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	
 	<title>index</title>
-	
+	<c:set var="contextPath" value="${pageContext.request.contextPath}" scope="application"/> 
 	<jsp:include  page="header.jsp"/>
-	<!-- Bootstrap 4 -->
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/popper.min.js"></script>
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/tab.js"></script>
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/dropdown.js"></script>
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/util.js"></script>
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/dynamic-tabs.js"></script>
+	
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -101,7 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Sidebar Menu -->
     <nav class="mt-2">
-      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <ul class="nav nav-pills nav-sidebar flex-column" id="menuNav" data-widget="treeview" role="menu" data-accordion="false">
      		<li class="nav-item has-treeview">
           <a href="#" class="nav-link" >
             <i class="nav-icon fa fa-pie-chart"></i>
@@ -143,6 +143,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
           </ul>
         </li>
+          
       </ul>
     </nav>
   </div>
@@ -192,6 +193,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
+<!-- Bootstrap 4 -->
+	
 <script>
 </script>
 </body>
