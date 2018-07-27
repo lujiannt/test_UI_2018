@@ -11,7 +11,7 @@ import com.lj.model.User;
 import com.lj.service.UserService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("user")
 public class UserController {
 	@Resource
     private UserService userService;
@@ -34,7 +34,7 @@ public class UserController {
 	
 	@RequestMapping("/loginToIndex")
 	public String loginToIndex(HttpSession session, User user) {
-		return "redirect: /hello/index";
+		return "index";
 	}
 
 }

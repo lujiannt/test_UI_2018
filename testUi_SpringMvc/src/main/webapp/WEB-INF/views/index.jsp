@@ -12,7 +12,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	
 	<title>index</title>
-	<c:set var="contextPath" value="${pageContext.request.contextPath}" scope="application"/> 
 	<jsp:include  page="header.jsp"/>
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/popper.min.js"></script>
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/tab.js"></script>
@@ -102,7 +101,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" id="menuNav" data-widget="treeview" role="menu" data-accordion="false">
-     		<li class="nav-item has-treeview">
+     	
+     	<!-- 
+     	<li class="nav-item has-treeview">
           <a href="#" class="nav-link" >
             <i class="nav-icon fa fa-pie-chart"></i>
             <p>
@@ -112,25 +113,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a tabId="page1" title="page1" url="/hello/page1" href="#" class="nav-link nav-link-url">
+              <a tabId="page1" title="page1" url="<%=request.getContextPath()%>/hello/page1" href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>page1</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="page2" title="page2" url="/hello/page2" href="#" class="nav-link nav-link-url">
+              <a tabId="page2" title="page2" url="<%=request.getContextPath()%>/hello/page2" href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>page2</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="page3" title="page3" url="/hello/page3"  href="#" class="nav-link nav-link-url">
+              <a tabId="page3" title="page3" url="<%=request.getContextPath()%>/hello/page3"  href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>page3</p>
               </a>
             </li>
             <li class="nav-item">
-              <a tabId="baidu" title="hello" url="/hello/hello"  href="#" class="nav-link nav-link-url">
+              <a tabId="baidu" title="hello" url="<%=request.getContextPath()%>/hello/hello"  href="#" class="nav-link nav-link-url">
                 <i class="fa fa-circle-o nav-icon"></i>
                 <p>hello</p>
               </a>
@@ -143,7 +144,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
           </ul>
         </li>
-          
+        -->
+        
       </ul>
     </nav>
   </div>

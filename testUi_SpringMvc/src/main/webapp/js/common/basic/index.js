@@ -51,7 +51,7 @@ $(function () {
 					var a = $("<a />", {
 						"tabId":childField.tabId,
 						"title":childField.title,
-				    	"url":childField.url,
+				    	"url":getPath() + "/" + childField.url,
 				    	"href":"#",
 				        "class": "nav-link nav-link-url",
 				        "click":function(){
@@ -181,6 +181,7 @@ $(function () {
 		//5.如果不是，删除掉要删的tab后，其余不变
 		if(length == 0) {
 			$(".nav-link-tab").removeClass("active");
+			$(".nav-link-tab").removeClass("activeTab");
 			$("#tab_"+option.id).remove();
 			$("#tab_row_"+option.id).remove();
 			$("#tab_row_home").show();
@@ -197,6 +198,7 @@ $(function () {
 			
 			if(flag) {
 				$(".nav-link-tab").removeClass("active");
+				$(".nav-link-tab").removeClass("activeTab");
 				$(".tab_row").hide();
 				$("#tab_"+option.id).remove();
 				$("#tab_row_"+option.id).remove();
@@ -205,6 +207,7 @@ $(function () {
 				$.each(newtabs,function(index,value){
 					if(index == length-1) {
 						$("#tab_"+$(this).attr('optionId')).addClass("active");
+						$("#tab_"+$(this).attr('optionId')).addClass("activeTab");
 						$("#tab_row_"+$(this).attr('optionId')).show();
 					}
 				});
@@ -213,14 +216,16 @@ $(function () {
 	}
 	
 	//获取项目路径 https://www.cnblogs.com/haimishasha/p/6209413.html
-	function  getPath(){
-		var curWwwPath=window.document.location.href;
-		var pathName=window.document.location.pathname;
-		var pos=curWwwPath.indexOf(pathName);
-		var localhostPaht=curWwwPath.substring(0,pos);
-		var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
-//		var realPath=localhostPaht+projectName;
-		var realPath=localhostPaht;
+	function getPath(){
+		var curWwwPath = window.document.location.href;
+		var pathName = window.document.location.pathname;
+		var pos = curWwwPath.indexOf(pathName);
+		var localhostPaht = curWwwPath.substring(0,pos);
+		var projectName = pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+		//web访问路径带项目名的情况
+		var realPath = localhostPaht+projectName;
+		//web访问路径不带项目名的情况
+//		var realPath = localhostPaht;
 	  
 		return realPath;
     }
