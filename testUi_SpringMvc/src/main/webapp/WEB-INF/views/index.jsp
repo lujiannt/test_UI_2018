@@ -18,7 +18,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/tab.js"></script>
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/dropdown.js"></script>
 	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/util.js"></script>
-	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap-tab/js/dynamic-tabs.js"></script>
+	<script src="<%=request.getContextPath()%>/js/common/basic/index.js"></script>
 	
 </head>
 <body class="hold-transition sidebar-mini">
