@@ -5,7 +5,7 @@
 //tab标签及主页其他相关样式功能
 $(function () {
 	//加载json菜单
-	var menuPath = "js/common/basic/menu.json"; 
+	var menuPath = "js/app/basic/menu.json"; 
 
 	$.getJSON({
         type: "post",

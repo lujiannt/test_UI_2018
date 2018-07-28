@@ -9,11 +9,6 @@
 	<!-- index style -->
   	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/basic/index.css">
   
-	<!-- jQuery -->
-	<script src="<%=request.getContextPath()%>/lte/plugins/jquery/jquery.min.js"></script>
-	<!-- AdminLTE App -->
-	<script src="<%=request.getContextPath()%>/lte/dist/js/adminlte.min.js"></script>
-	<!-- Bootstrap 4 -->
-	<script src="<%=request.getContextPath()%>/lte/plugins/bootstrap/js/bootstrap.bundle.js"></script>
+	
 
 	

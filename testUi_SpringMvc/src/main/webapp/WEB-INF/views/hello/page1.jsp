@@ -8,7 +8,10 @@
 
 <jsp:include  page="../header.jsp"/>
 
+<script data-main="/js/main" src="/js/lib/require.js"></script>
 <script type="text/javascript">
+	requirejs(["app/hello/hello"]);
+
 	var i=0;
 	function addI() {
 		i++;

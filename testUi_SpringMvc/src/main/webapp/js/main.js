@@ -1,7 +1,7 @@
 requirejs.config({
-    "baseUrl": "js/lib",
+    "baseUrl": "/js/lib",
     "paths": {
-        "app": "../common"
+        "app": "../app"
     },
     //处理没有遵循AMD规范的js
     "shim": {

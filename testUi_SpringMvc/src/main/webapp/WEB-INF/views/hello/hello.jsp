@@ -5,7 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
 <jsp:include  page="../header.jsp"/>
+<script data-main="/js/main" src="/js/lib/require.js"></script>
+<script>
+	requirejs(["app/hello/hello"]);
+</script>
 </head>
 <body style="background-color:transparent">
 

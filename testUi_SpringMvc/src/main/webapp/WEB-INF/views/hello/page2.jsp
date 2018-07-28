@@ -6,6 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Page2</title>
 <jsp:include  page="../header.jsp"/>
+<script data-main="/js/main" src="/js/lib/require.js"></script>
+<script>
+	requirejs(["app/hello/hello"]);
+</script>
 </head>
 <body style="background-color:transparent">
 	<h1>page2</h1>
