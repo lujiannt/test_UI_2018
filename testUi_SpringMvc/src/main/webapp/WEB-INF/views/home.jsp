@@ -12,7 +12,7 @@
 	requirejs(["app/hello/hello"]);
 </script>
 </head>
-<body>
+<body style="background-color:transparent;">
 	<h1>HOME</h1>
 	<div class="card">
               <div class="card-header">
