@@ -141,7 +141,7 @@ $(function () {
 					"id":"tab_row_"+option.id,
 					"optionId":	option.id,
 					"class":"col-sm-12 tab_row",
-					"style":"width:"+$(".tabContent").width+"px;height:560px"
+					"style":"width:"+$(".tabContent").width+"px;height:100%"
 				});
 				
 				var iframe = $("<iframe />", {

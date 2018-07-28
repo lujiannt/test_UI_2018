@@ -11,7 +11,7 @@
 	requirejs(["app/hello/hello"]);
 </script>
 </head>
-<body style="background-color:transparent">
+<body>
 	<h1>page2</h1>
 	
 	<div class="card">
