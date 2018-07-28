@@ -5,9 +5,11 @@
 //tab标签及主页其他相关样式功能
 $(function () {
 	//加载json菜单
+	var menuPath = "js/common/basic/menu.json"; 
+
 	$.getJSON({
         type: "post",
-        url: getPath()+"/test.json",
+        url: getPath() + "/" + menuPath,
 		success : function(data) {
 			$.each(data, function(index, field) {
               	var parentLi = $("<li />", {
@@ -215,7 +217,8 @@ $(function () {
 		}
 	}
 	
-	//获取项目路径 https://www.cnblogs.com/haimishasha/p/6209413.html
+	//获取项目路径 
+	//https://www.cnblogs.com/haimishasha/p/6209413.html
 	function getPath(){
 		var curWwwPath = window.document.location.href;
 		var pathName = window.document.location.pathname;
@@ -223,9 +226,9 @@ $(function () {
 		var localhostPaht = curWwwPath.substring(0,pos);
 		var projectName = pathName.substring(0,pathName.substr(1).indexOf('/')+1);
 		//web访问路径带项目名的情况
-		var realPath = localhostPaht+projectName;
+//		var realPath = localhostPaht+projectName;
 		//web访问路径不带项目名的情况
-//		var realPath = localhostPaht;
+		var realPath = localhostPaht;
 	  
 		return realPath;
     }
