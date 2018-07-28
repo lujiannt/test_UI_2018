@@ -5,7 +5,12 @@
 			{
 				"title":"hello",
 				"tabId":"hello",
-				"url":"/hello/hello"
+				"url":"hello/hello"
+			},
+			{
+				"title":"test404",
+				"tabId":"404",
+				"url":"test404"
 			}
 		]
 	},
@@ -15,17 +20,17 @@
 			{
 				"title":"page1",
 				"tabId":"page1",
-				"url":"/hello/page1"
+				"url":"hello/page1"
 			},
 			{
 				"title":"page2",
 				"tabId":"page2",
-				"url":"/hello/page2"
+				"url":"hello/page2"
 			},
 			{
 				"title":"page3",
 				"tabId":"page3",
-				"url":"/hello/page3"
+				"url":"hello/page3"
 			}
 		]
 	}
