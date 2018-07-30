@@ -18,6 +18,22 @@
     <div class="content">
     	<div class="row" style="margin-left:5px;margin-right:5px">
       		<div class="col-sm-12 tab_row" id="tab_row_home">
+	      		<div class="card">
+	      			<div class="card-header">
+				        <h3 class="card-title">alert</h3>
+					</div>
+	      			<fieldset class="m20 fieldset">
+						<button class="alert-api-button alert-btn1">提示</button>
+						<button class="alert-api-button alert-btn2">按钮1</button>
+						<button class="alert-api-button alert-btn3">按钮2</button>
+						<button class="alert-api-button alert-btn4">不使用动画</button>
+						<button class="alert-api-button alert-btn5">动画2</button>
+						<button class="alert-api-button alert-btn6">捕获页</button>
+						<button class="alert-api-button alert-btn7">iframe层</button>
+						<button class="alert-api-button alert-btn9">pc弹层</button>
+					</fieldset>
+	      		</div>
+	      		
       			<div class="card">
 			       <div class="card-header">
 			         <h3 class="card-title">page2</h3>

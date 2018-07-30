@@ -13,6 +13,32 @@
 </script>
 </head>
 <body>
-	<h1>Home</h1>
+<div class="content-header">
+</div>
+
+<div class="content">
+	<div class="row" style="width:100%;margin-left:5px;margin-right:5px">
+  		<div class="col-sm-12 tab_row">
+  			<div class="card">
+				<h1>home</h1>
+				
+				
+				<fieldset class="m20 fieldset">
+					<legend>实例演示</legend>
+					<button class="alert-api-button alert-btn1">提示</button>
+					<button class="alert-api-button alert-btn2">按钮1</button>
+					<button class="alert-api-button alert-btn3">按钮2</button>
+					<button class="alert-api-button alert-btn4">不使用动画</button>
+					<button class="alert-api-button alert-btn5">动画2</button>
+					<button class="alert-api-button alert-btn6">捕获页</button>
+					<button class="alert-api-button alert-btn7">iframe层</button>
+					<button class="alert-api-button alert-btn9">pc弹层</button>
+				</fieldset>
+				
+			</div>
+	  	</div>
+  	</div>
+</div>	
+	
 </body>
 </html>

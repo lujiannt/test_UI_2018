@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/lte/custom/icon/font-class/iconfont.css">
 	<!-- index style -->
   	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/basic/index.css">
+  	<!-- alert style -->
+  	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/basic/alert.css">
   
 	
 

@@ -1,4 +1,4 @@
-define(["jquery"],function(){
+define(["jquery","alert"],function(){
 	var basicJs = {};
 	
    /**

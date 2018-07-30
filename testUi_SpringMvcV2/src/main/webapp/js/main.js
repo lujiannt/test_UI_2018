@@ -6,6 +6,7 @@ requirejs.config({
     //处理没有遵循AMD规范的js
     "shim": {
     	"map": ["jquery"],
+    	"alert": ["jquery"],
 	    "helloEX": {
 	        //设置依赖
 	        deps: ["jquery"],
