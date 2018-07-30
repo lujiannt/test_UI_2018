@@ -6,11 +6,6 @@
 				"title":"hello",
 				"tabId":"hello",
 				"url":"hello/hello"
-			},
-			{
-				"title":"test404",
-				"tabId":"404",
-				"url":"test404"
 			}
 		]
 	},
