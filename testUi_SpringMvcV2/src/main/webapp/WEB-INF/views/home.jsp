@@ -12,8 +12,7 @@
 	requirejs(["app/hello/hello"]);
 </script>
 </head>
-<body style="background-color:transparent;">
-
-	<iframe src="/hello/page1" scrolling="auto" frameborder="0" onload="this.height=this.contentWindow.document.documentElement.scrollHeight"></iframe>
+<body>
+	<h1>Home</h1>
 </body>
 </html>

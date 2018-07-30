@@ -176,7 +176,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     	<!-- /.content-header -->
 
     	<!-- Main content -->
-    	<iframe id="tab_row_home" class="tab_row" src="/hello/page1" scrolling="auto" frameborder="0" onload="this.height=this.contentWindow.document.documentElement.scrollHeight"></iframe>
+    	<iframe id="tab_row_home" class="tab_row" src="/hello/home" scrolling="auto" frameborder="0" onload="this.height=this.contentWindow.document.documentElement.scrollHeight"></iframe>
     	<!-- /.content -->
 	</div>
 	<!-- /.content-wrapper -->
